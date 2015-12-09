@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+        xmlns:f="http://java.sun.com/jsf/core"  
+        xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Cadastro de Funcionarios do Setor Administrativo</title>
+    </h:head>
+    <h:body>
+        <p>Cadastro do Motorista</p>
+        <h:form>
+            <h:panelGrid columns="2">
+                Nome do Motorista: <h:inputText value="#{motoristaManagedBean.motorista.nome}" /> <br/>
+                Sexo: <h:selectOneMenu value="#{motoristaManagedBean.motorista.sexo}" >
+                    <f:selectItem itemLabel="Selecione sexo" itemValue="" />
+                    <f:selectItem itemLabel="Masculino" itemValue="M" />
+                    <f:selectItem itemLabel="Feminino" itemValue="F" />
+                </h:selectOneMenu> <br/>
+                cpf: <h:inputText value="#{motoristaManagedBean.motorista.cpf}" /> <br/>
+                Logradouro: <h:inputText value="#{motoristaManagedBean.motorista.endereco.logradouro}" requiredMessage="Selecione uma opção" title="Tipo de ação"/>
+                Numero: <h:inputText value="#{motoristaManagedBean.motorista.endereco.numero}" /> <br/>
+                Bairro: <h:inputText value="#{motoristaManagedBean.motorista.endereco.bairro}" /> <br/>
+                cep: <h:inputText value="#{motoristaManagedBean.motorista.endereco.cep}" /> <br/>
+                Cidade: <h:inputText value="#{motoristaManagedBean.motorista.endereco.cidade}" /> <br/>
+                UF: <h:selectOneMenu id="selecionaEstado" value="#{motoristaManagedBean.motorista.endereco.uf}" >
+                        <f:selectItem itemLabel="Selecione estado" itemValue="" />
+                       <f:selectItem itemLabel="AC" itemValue="AC" />
+                       <f:selectItem itemLabel="AL" itemValue="AL" />
+                       <f:selectItem itemLabel="AP" itemValue="AP" />
+                       <f:selectItem itemLabel="AM" itemValue="AM" />
+                       <f:selectItem itemLabel="BA" itemValue="BA" />
+                       <f:selectItem itemLabel="CE" itemValue="CE" />
+                       <f:selectItem itemLabel="DF" itemValue="DF" />
+                       <f:selectItem itemLabel="ES" itemValue="ES" />
+                       <f:selectItem itemLabel="GO" itemValue="GO" />
+                       <f:selectItem itemLabel="MA" itemValue="MA" />
+                       <f:selectItem itemLabel="MT" itemValue="MT" />
+                       <f:selectItem itemLabel="MG" itemValue="MG" />
+                       <f:selectItem itemLabel="MS" itemValue="MS" />
+                       <f:selectItem itemLabel="PA" itemValue="PA" />
+                       <f:selectItem itemLabel="PB" itemValue="PB" />
+                       <f:selectItem itemLabel="PR" itemValue="PR" />
+                       <f:selectItem itemLabel="PE" itemValue="PE" />
+                       <f:selectItem itemLabel="PI" itemValue="PI" />
+                       <f:selectItem itemLabel="RJ" itemValue="RJ" />
+                       <f:selectItem itemLabel="RN" itemValue="RN" />
+                       <f:selectItem itemLabel="RS" itemValue="RS" />
+                       <f:selectItem itemLabel="RO" itemValue="RO" />
+                       <f:selectItem itemLabel="RR" itemValue="RR" />
+                       <f:selectItem itemLabel="SC" itemValue="SC" />
+                       <f:selectItem itemLabel="SP" itemValue="SP" />
+                       <f:selectItem itemLabel="SE" itemValue="SE" />
+                       <f:selectItem itemLabel="TO" itemValue="TO" />
+                </h:selectOneMenu> <br/>
+            </h:panelGrid>
+        </h:form>
+        <h:commandButton value="Salvar" action="#{motoristaManagedBean.create(motoristaManagedBean.motorista)}"/>
+    </h:body>
+</html>
